@@ -7,6 +7,8 @@
 /Intermediate
 /Saved
 Content/StarterContent/
+Content/StarterContent/HDRI
+#Content/StarterContent/Textures
 
 ######################
 # VS Generated Files #
@@ -15,4 +17,4 @@ Content/StarterContent/
 .vs/Building_Escape/v15/Browse.VC.opendb
 .vs/Building_Escape/v15/Solution.VC.db-shm
 .vs/Building_Escape/v15/Solution.VC.db-wal
-.vs/Building_Escape/v15/ipch/AutoPCH/3307673a9e1dcb82/OPENDOOR.ipch
+*.ipch
