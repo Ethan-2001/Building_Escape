@@ -40,4 +40,6 @@ private:
 	AActor* ActorThatOpens; // Remember Pawn Inherits From Actor
 	AActor* Owner; // The Owning Door
 	 		
+	// Returns Total Mass In KG
+	float GetTotalMassOfActorsOnPlate();
 };
