@@ -53,6 +53,7 @@ void UGrabber::Grab()
 	// If We Hit Something Then Attach A Physics Handle
 	if (ActorHit)
 	{
+		if (!PhysicsHandle) { return; }
 		PhysicsHandle->GrabComponentAtLocationWithRotation
 		(
 			ComponentToGrab,
@@ -65,6 +66,7 @@ void UGrabber::Grab()
 
 void UGrabber::Release()
 {
+	if (!PhysicsHandle) { return; }
 	PhysicsHandle->ReleaseComponent();
 }
 
@@ -72,8 +74,9 @@ void UGrabber::Release()
 void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// If The Physics Handle Is Attached
+	
+	if (!PhysicsHandle) { return; }
+	// If The Physics Handle Is Attached	 
 	if (PhysicsHandle->GrabbedComponent)
 	{
 		// Move The Object That Were Holding
